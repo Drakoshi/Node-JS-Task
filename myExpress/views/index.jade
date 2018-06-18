@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+ 
+  form(action="/send", method="post")
+    div
+      p Enter your message!
+    //div
+       //span.label ID 
+       //input(type="text", name="id")
+    div
+      span.label Message 
+      input(type="text", name="msg")
+    div
+      input(type="submit", value="Send")
+
+  form(action="/receive", method="post")
+    div
+      p Enter ID to receive message!
+    div
+      span.label ID 
+      input(type="text", name="id")
+    div
+      input(type="submit", value="Receive")
+
+  
